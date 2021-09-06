@@ -36,34 +36,38 @@ function App() {
   // state이 복사본을 만들어 수정하기
   // deep copy해서 수정하기 [...복사할 것] // array나 object는
 
+  function 반복된UI() {
+
+    const 어레이 = [];
+    for (let i = 0; i < 3; i++) {
+
+      어레이.push(<div>안녕</div>);
+    }
+    return 어레이
+  }
+
+  // for반복문 보통 함수 안에서 사용하고 array에 HTML 추가하는 방식
+
   return (
   <div className="App">
       <div className="black-nav">
-        <div className="text">개d발 Blog</div>
+      <div className="text">개d발 Blog</div>
       </div>
-  <button> 버튼 </button>
+  {
+    글제목.map(function(i) {
+      return (
+        <div className="list">
+        <h3> { i } </h3>
+        <p> 2월 17일 발행</p>
+        <hr />
+        </div>
+      )
+    })
+  }
 
-  <div className="lists">
-      <div className="list">
-      <h3> {글제목[0] } <span onClick={ () => {하트변경(하트 + 1)}}>♥</span> {하트} </h3>
-      <p> 2월 17일 발행</p>
-      <hr />
-      </div>
+  <button onClick={ modal바꾸기 }>버ㄴ튼</button>
 
-      <div className="list">
-      <h3> {글제목[1] } </h3>
-      <p> 2월 17일 발행</p>
-      <hr />
-      </div>
-
-      <div className="list">
-      <h3> {글제목[2]} </h3>
-      <p> 2월 17일 발행</p>
-      <hr />
-      </div>
-  </div>
-
-  <button onClick={ modal바꾸기 }>버튼</button>
+  { 반복된UI() }
 
     {
       modal === true
