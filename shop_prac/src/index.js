@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter  } from 'react-router-dom';
+
+// BrowserRouter vs HashRouter Hash는 url에 #기호가 있다. 좀더 안전하게 서버에게 요청하기 위해서. 사이트 주소 뒤에 #이 있는것은 서버로 전달X
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
