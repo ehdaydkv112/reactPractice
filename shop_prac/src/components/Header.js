@@ -8,9 +8,9 @@ const Header = (props) => {
         <Container>
         <Navbar.Brand>LoveLove</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link> <Link to="/">Home</Link> </Nav.Link>
-          <Nav.Link> <Link to="/detail">Detail</Link> </Nav.Link>
-          <Nav.Link> <Link to="/">etc</Link> </Nav.Link>
+          <Nav.Link as={Link} to="/"> Home  </Nav.Link>
+          <Nav.Link as={Link} to="/detail"> Detail </Nav.Link>
+          <Nav.Link as={Link} to="/"> etc </Nav.Link>
         </Nav>
         </Container>
       </Navbar>
